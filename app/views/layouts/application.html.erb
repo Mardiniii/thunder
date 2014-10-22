@@ -2,32 +2,55 @@
 <html>
 <head>
   <title>Fzone</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link type="text/css" rel="stylesheet" href="style.css">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
   <header>
-    <% if user_signed_in? %>
-      <%= link_to "Salir", destroy_user_session_path, method: :delete %>
-      <%= image_tag Gravatar.new(current_user.email).image_url %>
-    <% end %>
-    <h1>TE GUSTA O NO</h1>
+    <nav class="navbar navbar-default" id="barraprincipal" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" id="logo" href="/">like or not like</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <p class="navbar-text" id="mensajebarra">People, maps, and matching!</p>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <% if user_signed_in? %>                
+                <%= image_tag Gravatar.new(current_user.email).image_url %>
+                <%= link_to "Salir", destroy_user_session_path, method: :delete %>
+              <% end %>
+            </li>
+          </ul>  
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
   </header>
+  
+  <div class="container cuerpo">
+    
+    <div class="content"> <!--alerta-->
+      <%= yield %>
+    </div>
 
-  <p>Elige aquellos amig@s que te gustan de forma anonima, te avisaremos si ambos coinciden, el resto va por tu cuenta.</p>
-
-  <div class="content">
-    <% flash.each do |name, err|%>
-      <%= content_tag :div, err, class: name %>
-    <% end %>
-
-    <%= yield %>
   </div>
 
-  <footer>
+  <div class="well well-sm container-fluid text-center footer">
     <p>Escribenos en twitter <a href="#">@tegustaono</a></p>
-  </footer>
-
+  </div>
 </body>
 </html>

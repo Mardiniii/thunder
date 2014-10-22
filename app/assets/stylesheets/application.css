@@ -13,69 +13,162 @@
  *= require_tree .
  *= require_self
  */
+ /*-------------------------------------------------*/
+/*Personalizando background del body*/
+ body{
+	background-image: url(http://www.zingerbugimages.com/backgrounds/light_blue_and_white_interlocking_concentric_circles.jpg);
+ }
+ /*-------------------------------------------------*/
+ .nav > li > a{
+	display: inline;
+ }
+.nav>li>img{
+	width: 51px;
+	height: 51px;
+}
+#logo, #mensajebarra{
+	color: #3071a9;
+}
+#logo{
+	font-weight: bold;
+}
+/*-------------------------------------------------*/
+/*Personalizando estilos e imagenes en el carousel */
+#carousel-example-generic{
+	margin-top: 25px;
+}
+.carousel-caption h3{
+   font-size: 50px;
+   color: white;
+}
+#carousel-example-generic .item{
+	max-height: 500px;
+}
+}#slide1, #slide2, #slide3 {
+	overflow: hidden;
+}
+#slide1 img, #slide2 img, #slide3 img {
+	width: 1280px;	overflow: hidden;
+}
+/*-------------------------------------------------*/
+/*Personalizando el footer*/
+.footer{
+	position: absolute;
+	bottom:0;
+	margin-bottom: 0;
+	margin-top: 20px;
+	border-radius: 0;
+	width: 100%;
+}
+/*-------------------------------------------------*/
+/*Personalizando botones*/
+.botonentrar,.botonregistro{
+	margin-top: 20px;
+}
+.botonregistro2{
+	margin-top: 0;
+}
+.botonregistro3, .botonrecuperador{
+	margin-top: 10px;
+}
+/*-------------------------------------------------*/
+/*Personalizando el cuerpo del home*/
+#barraprincipal{
+	margin-bottom: 0;
+}
+/*-------------------------------------------------*/
+/*Personalizando el Login*/
+#login{
+	background-color: white;
+	width: auto;
+	margin-top: 50px;
+	padding: 15px 30px;
+}
+#login h2{
+	font-size: 45px;
+	margin-top: 10px;
+}
+/*-------------------------------------------------*/
+/*Personalizando el Login*/
+#signup{
+	background-color: white;
+	width: auto;
+	margin-top: 50px;
+	padding: 15px 30px;
+}
+/*-------------------------------------------------*/
+/*Personalizando Recuperacion de Password*/
+#recuperador{
+	background-color: white;
+	width: auto;
+	margin-top: 50px;
+	padding: 15px 30px;
+}
+#recuperador h2{
+	font-size: 30px;
+	margin-top: 10px;
+}
+/*-------------------------------------------------*/
+/*Personalizando like*/
+#like{
+	background-color: white;
+	width: auto;
+	margin-top: 50px;
+	padding: 15px 30px;
+}
+#like #userinfo, #msgnomaslike{
+	color: #3071a9;
+}
+.botongustar, .botonnogustar{
+	margin-top: 10px;
+}
+/*-------------------------------------------------*/
+/*Personalizando vista cuando ya no hay mas likes*/
+#nomaslike{
+	background-color: white;
+	width: auto;
+	margin-top: 50px;
+	padding: 15px 30px;
+	font-size: 25px;
+}
+#nomaslike p{
+	margin-top: 10px;
+}
+/*-------------------------------------------------*/
+/*Personalizando el match entre dos usuarios*/
+#match{
+	background-color: white;
+	width: auto;
+	margin-top: 50px;
+	padding: 15px 30px;
 
-body {
-  background: linear-gradient(#000, #003366);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  font-family: Avenir Next, Arial;
-  color: #ffffff;
+}
+#matching{
+	display: inline-block;
+}
+/*-------------------------------------------------*/
+/*Personalizando Media Queries*/
+/* Portrait & landscape phone */
+/* Large desktop */
+@media (min-width: 1200px) {
+
 }
 
-p {
-  color: gray;
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+ 	.carousel-caption h3{
+   	font-size: 35px;
+   	color: white;
+   }
 }
 
-a {
-  color: #099;
+@media (max-width: 480px) {
+	.carousel-caption h3{
+   	font-size: 25px;
+   	color: white;
+   }
 }
 
-header a {
-  color: #fff;
-  display: block;
-  float: right;
-}
-header img {
-  height: 30px;
-  display: block;
-  float: right;
-}
 
-figure {
-  width: 300px;
-  margin: 30px auto 30px auto;
-  background-color: #f5f5f5;
-  padding: 15px;
-}
-figure img {
-  height: 300px;
-}
-figure button {
-  margin-left: 20px;
-  text-align: right;
-  height: 50px;
-  width: 120px;
-  background: url(like.png) no-repeat;
-}
-.like {
-  background-position: 0 -50px;
-}
-.nolike {
-}
 
-footer {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-}
 
-.alert {
-  color: darkred;
-}
-.notice{
-  color: darkgreen;
-}
-
-#match figure {
-  float: left;
-}

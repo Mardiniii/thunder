@@ -1,11 +1,14 @@
-<figure>
-  <%= image_tag Gravatar.new(@friend.email).image_url(s: 300) %>
-  <p><%= @friend.name %>, <strong><%= @friend.age %> años</strong></p>
+<div class="row">
+	<div class="col-md-6 col-md-offset-3 text-center">
+		<div class="panel panel-default" id="like">
+			<figure>
+			  <%= image_tag Gravatar.new(@friend.email).image_url(s: 300) %>
+			  <p id="userinfo"><%= @friend.name %>, <strong><%= @friend.age %> años</strong></p>
+			  <%= link_to "Me Gusta", friends_like_path(id: @friend, liked: true), method: :post,class:  "btn btn-primary like" %>
+			  <%= link_to "No Me Gusta", friends_like_path(id: @friend, liked: false), method: :post,class:  "btn btn-primary nolike" %>
+			</figure>
+		</div>
+	</div>
+</div>
 
-  <button class="like">
-    <%= link_to "Me Gusta", friends_like_path(id: @friend, liked: true), method: :post %>
-  </button>
-  <button class="nolike">
-    <%= link_to "No Me Gusta", friends_like_path(id: @friend, liked: false), method: :post %>
-  </button>
-</figure>
+		

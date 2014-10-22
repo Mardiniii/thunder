@@ -1,12 +1,15 @@
-<section id="match">
-  <h3>Encontramos una concidencia!</h3>
-  <figure>
-    <%= image_tag Gravatar.new(@friend.email).image_url(s: 300) %>
-    <p><%= @friend.name %>, <strong><%= @friend.age %> años</strong></p>
-  </figure>
-  <div class="heart"></div>
-  <figure>
-    <%= image_tag Gravatar.new(current_user.email).image_url(s: 300) %>
-    <p><%= current_user.name %>, <strong><%= current_user.age %> años</strong></p>
-  </figure>
-</section>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2 text-center">
+    <div class="panel panel-default" id="match">
+        <h3>Encontramos una concidencia!</h3>
+        <figure id="matching">
+          <%= image_tag Gravatar.new(@friend.email).image_url(s: 300) %>
+          <p><%= @friend.name %>, <strong><%= @friend.age %> años</strong></p>
+        </figure>
+        <figure id="matching">
+          <%= image_tag Gravatar.new(current_user.email).image_url(s: 300) %>
+          <p><%= current_user.name %>, <strong><%= current_user.age %> años</strong></p>
+        </figure>
+    </div>
+  </div>
+</div>

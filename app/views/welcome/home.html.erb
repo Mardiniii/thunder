@@ -1,0 +1,41 @@
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active" id="slide1">
+      <img src="http://www.stpaulscanfordheath.org.uk/spchwp/wp-content/uploads/2014/04/children-and-young-peoples-conference-pic.jpg" alt="">
+      <div class="carousel-caption">
+        <h3> We are conecting people... </h3>
+      </div>
+    </div>
+    <div class="item" id="slide2">
+      <img src="http://img.gawkerassets.com/img/18ag854s51h83png/original.png" alt="">
+      <div class="carousel-caption">
+        <h3>Searching people near to your current location... </h3>
+      </div>
+    </div>
+    <div class="item" id="slide3">
+      <img src="http://www.jcuatro.com/wp-content/uploads/2011/11/apreton-de-manos.jpg" alt="">
+      <div class="carousel-caption">
+        <h3>And making that people: ¡Matching!</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
+<div class="text-center">
+	<%= link_to "Login", new_user_session_path, class: "btn btn-primary botonentrar" %>
+	<%= link_to "Registrarse", new_user_registration_path, class: "btn btn-primary botonregistro" %>
+</div>
