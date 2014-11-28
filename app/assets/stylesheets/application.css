@@ -44,7 +44,7 @@
 #carousel-example-generic .item{
 	max-height: 500px;
 }
-}#slide1, #slide2, #slide3 {
+#slide1, #slide2, #slide3 {
 	overflow: hidden;
 }
 #slide1 img, #slide2 img, #slide3 img {
