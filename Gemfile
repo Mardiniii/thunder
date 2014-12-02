@@ -22,6 +22,7 @@ group :development do
   gem 'guard'
   gem 'letter_opener', '~> 1.2.0'
   gem 'guard-livereload', require: false
+  gem 'awesome_print'
 end
 
 # Use ActiveModel has_secure_password
