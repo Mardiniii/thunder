@@ -20,6 +20,7 @@ group :development do
   gem 'pry' #debugger
   gem 'spring'
   gem 'guard'
+  gem 'letter_opener', '~> 1.2.0'
   gem 'guard-livereload', require: false
 end
 
