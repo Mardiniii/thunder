@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'welcome/home'
 
-  devise_for :users
+  devise_for :users, controllers: { registrations: 'registrations' }
   root 'welcome#home'
 
   get 'friends/index'
