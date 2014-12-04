@@ -3,7 +3,7 @@ class UserMailer < ActionMailer::Base
 
   def welcome_email(user)
   	@user = user
-  	@url = 'https://twitter.com/Mardiniii'
+  	@url = new_user_session_url
     mail(to: @user.email, subject: 'Welcome to My Awesome Thunder Site')
   end
 
